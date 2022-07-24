@@ -1,0 +1,256 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\usepackage{cite}
+
+
+%\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+%\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\newcommand{\sqrtsNN}{\mbox{$\sqrt{\mathrm{s}_{_{\mathrm{NN}}}}$}}
+\newcommand{\sqrts}{\mbox{$\sqrt{\mathrm{s}}$}}
+\newcommand{\axi}{$\overline{\Xi}^+$}
+\newcommand{\xim}{$\Xi^-$}
+%\newcommand{\xi}{$\Xi$}
+\newcommand{\alam}{$\overline{\Lambda}$}
+\newcommand{\sbar}{$\overline{\s}$}
+\newcommand{\lam}{$\Lambda$}
+\newcommand{\ks}{$\mathrm{K}^{0}_{\mathrm S}$}
+\newcommand{\omm}{$\Omega^-$}
+\newcommand{\aom}{$\overline{\Omega}^+$}
+\newcommand{\mpt}{$\langle p_T \rangle$ }
+\newcommand{\ppt}{$p_{\rm T}$}
+\newcommand{\muB}{$\mu_{\rm B}$}
+\newcommand{\rcp}{$R_{\textrm{\tiny{CP}}}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.12}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setlength{\parindent}{.5cm} \setlength{\columnsep}{.5cm}
+\setlength{\oddsidemargin}{-.5cm} \setlength{\topmargin}{-1.5cm}
+\setlength{\textwidth}{17.5cm} \setlength{\textheight}{23.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \auau  {Au+Au}
+\def \pp    {$p + p$ }
+\def \llam {$\Lambda + \overline{\Lambda}$}
+\def \xxi       {$\Xi^- + \overline{\Xi}^+$ }
+\def \oom       {$\Omega^- + \overline{\Omega}^+$ }
+\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
+
+\usepackage{graphicx}
+%\usepackage{cite}
+
+%\usepackage{lineno}
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+\raggedbottom
+
+\bibliographystyle{unsrt}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{lineno}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\Large \bf A Comprehensive Study of Energy Dependence of Particle Ratios in $pp$ Collisions from SPS to LHC Energies }
+
+\vskip1.0cm
+
+A.~M.~Khan$^{1}$,
+Junaid~Tariq$^{2}$,
+Anwarzada$^{3}$, 
+Ijaz Ahmed$^{3}${\footnote{E-mail: ijaz.ahmed@riphah.edu.pk}},
+M.~U.~Ashraf$^{4}${\footnote{Email: usman.ashraf@cern.ch}}\\
+
+{\small\it 
+$^1$Key Laboratory of Quark \& Lepton Physics (MOE) and Institute of Particle Physics,
+Central China Normal University, Wuhan 430079, China\\
+$^2$ Department of Physics, Quaid-i-Azam University, Islamabad 44000, Pakistan\\
+%$^3$ Department of Physics, Riphah International University, Islamabad 44000, Pakistan\\
+$^3$ Department of Physics, Riphah International University, Islamabad 44000, Pakistan\\
+$^4$ Pakistan Institute of Nuclear Science and Technology (PINSTECH), Islamabad 44000, Pakistan\\
+
+}
+\end{center}
+
+
+\vskip1.0cm
+%%%%%%%%%%%%%%%%%%%%%%
+%\linenumbers
+%\date{October 2021}
+
+%\begin{document}
+
+%\maketitle
+\begin{abstract}
+
+A comprehensive study has been preformed to estimate the kaon to pion ($K^+$/$\pi^+$, $K^-$/$\pi^-$) ratio and total kaon to total pion ($K$/$\pi$) ratio as a function of energy in $pp$ collisions at different energies i.e., \sqrts~= 6.3, 17.3, 62.4, 200, 900 GeV, 2.76 TeV, 7 TeV, 13 TeV and 14 TeV using EPOS1.99, EPOS LHC, HIJING, QGSJET II and Sibyll model simulations. Significant presence of horn in $K^+$/$\pi^+$ and $K^-$/$\pi^-$ ratio is suggested by experimental data at lower energies, which is confirmed by HIJING and EPOS LHC model. A smooth increase in $K/\pi$ ratio is also seen at higher energies. The current model simulations predict the similar increase in the ratio with increasing energies. Almost all the models suggest a saturation in $K/\pi$ ratio at the LHC energies. On the basis of previous available measurements, we also give predictions of these ratios at \sqrts~= 13 and 14 TeV. All the model predictions at \sqrts~= 13 and 14 TeV suggest a saturation in the ratio at higher energies. However, QGSJTE II predictions are higher as compared to other models.      
+
+\vskip0.5cm
+\keywords{collisions, simulation, function, energy, prediction}
+\end{abstract}
+
+
+%\maketitle
+%\begin{multicols}{2}
+
+\section{Introduction}\label{sec1}
+
+%One of the most fundamental physical observables, which have been extensively measured and hence studied in cosmic-ray physics and hadronic colliders for many decades, are the yield and transverse momentum spectra ({\ppt}) of identified particles produced in high energy hadronic interactions~\cite{1}. At partonic level, hadrons are produced from the soft and hard scattering processes at collider energies. The interaction of two partons with large amount of momentum transfer is known as the hard scatterings which results the production of high {\ppt} particles. Theoretically, the factorization theorem based perturbative Quantum Chromodynamics (pQCD) caEPOS LHClculations explain this process~\cite{2}. At the LHC, the lower $x$ regime is probed by increasing the center of mass energy (\sqrts) which results the increase in contributions from the hard scattering processes. The dominant production of high-{\ppt} particles are from the fragmentation of gluons in the kinematic regions probed by these measurements~\cite{3,4}. On the other hand, the origin of bulk of low {\ppt} ({\ppt} $< 2$ GeV/$c$) particles are from soft scattering processes having small amount of momentum transfer. The production of particles in this regime cannot be calculated from the first principle and therefore QCD inspired phenomonological models plays a significant role for these calculations. These models are then tuned for the comparison of previous measurements and hence, low {\ppt} measurements may helpful to provide further important constraints on models.             
+
+The nucleus-nucleus ($AA$) collisions at ultra-relativistic energies has been one of the major area of interest for experimental and theoretical physicists. The $AA$ collisions could be helpful to extract the information about the spatiotemporal evolution of multi-particle production processes, one of the primary interests in view of recent progresses in Quantum Chromodynamics (QCD). In addition to $AA$ interactions, the study of proton-proton ($pp$) collisions are also important because it provides input to the theoretical models bases on the strong interactions. Another important aspect is that, it acts as a baseline to understand the $AA$ collisions at relativistic and ultra-relativistic energies. The production of soft particle in $pp$ interactions is sensitive to the hadronization of quark, flavor distribution inside the proton and baryon number transport. The study of transverse momentum ({\ppt}) of identified charged particle in $pp$ interactions act as a bottom-line reference to those measured in $AA$ interactions. This reference is also needed for the investigation of possible initial state effects in the collisions.    
+
+The multiplicity distribution of produced particles in $pp$ collisions is one of the basic observables which shows the properties of the underlying production mechanisms of the different particles. In addition to the production of $\pi^\pm$, the production of $K^\pm$ is also of great interest due to the fact that strangeness production is a sensitive probe to study the hadronic interactions as well as hadronization in $pp$ and ultra-relativistic $NN$ collisions. The strangeness enhancement in $AA$ collisions is suggested as a possible signature of quark-gluon plasma (QGP) ~\cite{5}. It is a fact that the initial state collisions does not contain any strange quark or strange anti-quark but the production of kaons confirms that the strange quark and anti-strange quark pair is created during the collisions between nucleons and nuclei. The nuclei collisions form a high energy density fireball which expand rapidly and an intermediate partonic phase, the QGP is expected to produce~\cite{6}. Therefore, the investigation of these interactions may provide useful information to distinguish between hadronic and partonic matter as well as the properties of phase transition in between.
+
+The production of $K^\pm$ in $pp$ collisions will shed light to understand the strangeness production mechanisms in elementary collisions~\cite{5}. In high energy collisions, the $K/\pi$ ratio suggested as a key tool to study the strongly interacting matter by means of relative strangeness yield. Another important aspect to study this ratio is to address the the possible questions regarding the phase transition but also helps to better understand the hadronization and pre-equilibrium dynamics of the system. A horn is seen in the $K/\pi$ ratio distribution in $AA$ collisions around \sqrts~=8 GeV which may indicate the onset of deconfinement in comparison with smaller colliding systems~\cite{7}, while it could be used as a reference for the investigation of the strangeness enhancement in $pp$ collisions
+
+
+This paper presents a comparison of $K^+/\pi^+$, $K^-/\pi^-$ and $K/\pi$ ratio at different energies, i.e., \sqrts~= 6.3, 17.3, 62.4, 200, 900 GeV, 2.76 TeV, 13 TeV and 14 TeV with various monte-carlo model based simulations in $pp$ collisions. The data from different experiments is then compared with EPOS1.99, EPOS LHC, HIJING, QGSJET II and Sibyll model simulations. The paper is organized as follows; Brief introduction of the models is presented in section~\ref{sec2}. In section~\ref{sec3} results and discussion is presented followed by conclusion in section~\ref{sec4}.   
+
+
+\section{Model Details}\label{sec2}
+ It is not yet possible to perform calculations with first principles of Quantum Chromodynamics (QCD) for the observables related to bulk of the produced particles at colliders in high energy interactions. Phenomenological models, relying on basic principles of Quantum Field Theory (QFT) and predictions of pQCD together with phenomenological fits, are instead used for the predictions of various observables high energy interactions~\cite{dEnterria:2011twh}. The various models used for comparisons are briefly discussed in the remaining part of this section.
+
+%\subsection{DPMJET-III}
+{\bf DPMJET} is based on Dual Parton Model (DPM) for the description of soft and multi-particle interactions in the high-energy collisions. Soft processes are described by pomerons exchange under the Regge theory scheme and the hard processes by using perturbative parton scattering approach. DPMJET works on the principles of multiple scattering Gribov-Glauber formalism and can be used to simulate a wide range of $hh$, $\gamma h$, $\gamma \gamma$, $AB$ and $\gamma A$ collisions for the energies ranging from few GeV to cosmic-ray interactions of the highest energy scale. The physics models and flexibility of DPMJET allows for the calculations of total, (quasi) elastic as well as production cross-sections for various colliding systems at high energies~\cite{Roesler:2000he}. The hadronic interaction model for $pp$ collisions in the DPMJET is derived from PHOJET while the fragmentation configurations are acceded from PYTHIA Lund model~\cite{ATLAS:2020bhl}. DPMJETIII integrated the features of PHOJET, DPMJETII and DTUNUC2 models with Glauber-Gribov calculations for intra-nuclear cascades, excited nuclei and various nuclear cross-sections~\cite{Roesler:2000he}. An account of DPMJET model characteristics and upgraded features is made in Refs.~\cite{Roesler:2000he, Bopp:2005cr}. 
+
+%\subsection{EPOS1.99}
+{\bf EPOS} is based on a scattering approach in which partons and strings are treated consistently in a quantum mechanical framework. A high-energy hadronic interaction, in simple parton based models is considered as a “parton ladder” exchange between participants of the interaction. The “parton ladder” in EPOS has two parts, a hard-scattering part and an entirely phenomenological soft part parameterized in Regge pole fashion. Therefore, it is based on perturbative QCD, Gribov-Regge multiple scattering, and string fragmentation. EPOS LHC model has the same theoretical foundation as the EPOS 1.99. In addition, EPOS LHC makes a few adjustments to the parameters related to flow of the high-density core of thermalized matter created following pp or $AA$ collisions. %In addition, EPOS includes off-shell remnants in the picture and thus can solve multi-strange baryon problem arising in the conventional interaction models. Effects related to consistent cross-section calculation with energy conservation, Cronin transverse momentum broadening, parton saturation, screening and collective behaviour in heavy-ion interactions have also been included in EPOS. The version EPOS1.99 used in this study included the non-linear effects, reduced cross section and inelasticity as compared to its previous version EPOS1.61.%
+More details on EPOS model and developments included in EPOS1.99 can be found in Ref.~\cite{Pierog:2009zt}.
+
+
+%\subsection{QGSJETII-04}
+{ \bf QGSJET} hadronic interaction model is developed in the framework of Quark-Gluon String model~\cite{Engel:2011zzb}. The description of semi-hard processes as “semi-hard pomeron” approach and a scheme for incorporating the heavy-ion interactions were later included in the model~\cite{Kalmykov:1993qe}. In the QGSJET, a scattering is considered as a pomeron exchange process having two different (soft and semi-hard) components. Nucleus-Nucleus or hadron-hadron interactions are then modelled under the Gribove’s Reggeon Theory as multiple scattering processes and the Lund algorithm is used to disintegrate supercritical pomerons into strings. Abramovski Gribov Kancheli (AGK) cutting rules and optical theorem are employed to estimate the cross sections of the final states. Parton cascade overlapping at higher energies or in central collisions create significant nonlinear effects in the interactions, these effects are described as pomeron-pomeron interactions in the Raggeon Field Theory (RFT). The QGSJETII model has been designed to include the nonlinear effects at the fundamental level by enhanced pomeron diagrams approach~\cite{Ostapchenko:2004ss}. Further details about the QGSJET model and QGSJETII can be seen in Refs.~\cite{Ostapchenko:2004ss, Engel:2011zzb, Kalmykov:1993qe}
+
+{\bf HIJING} model -- an acronym for heavy-ion jet interaction generator. The pQCD inspired model, Dual Parton model (DPM)~\cite{Capella:1979fm} for the study of jet fragmentation, while to study the effects of soft interactions at low and medium energies it uses the Lund fragmentation~\cite{Andersson:2001yu}. The particular development of this model is related to study the parton distribution functions (PDF), associated production of particles, jets and mini-jets produced in dense medium and soft excitation processes~\cite{Wang:1991hta}. HIJING can simulate multi-particles production in different systems i.e., $pp$ and $AA$ up to energy range of $\sqrt{s_{NN}}= 5-2000 $~GeV~\cite{Capella:1979fm, Wang:1991hta}. At the time of development, HIJING was the only model incorporates the pQCD methodology of multiple-jet processes from Pythia and other related processes including parton shadowing and jet quenching.  
+
+
+%\subsection{Sibyll2.3d}
+{ \bf Sibyll} event generator describes the small angle production and projectile direction flow very well as it was designed majorly to understand the air showers and cosmic ray interactions in the Earth’s atmosphere. The interaction aspects related to jet production at higher {\ppt} and electroweak processes are not very well embedded in the workings of the model~\cite{Riehn:2019jet}. However, implementation of basic principles from unitarity and scattering theory empowers Sibyll to be used for phase space and energies of the interactions that are beyond the scope of modern colliders~\cite{Riehn:2017mfm}. Nonetheless, Sibyll has been used to well reproduce the LHC Run-I data~\cite{Riehn:2019jet}. The upgraded version Sibyll2.3 included better fits describing the $p/\pi/k$ elastic and total cross sections with inputs from experimental data. Improvement in the modeling of fragmentation region is incorporated in Sibyll2.3c. The improved version, Sibyll2.3d gives better $\pi^{+}/\pi^{0}$ ratios description along with other features that are important for the hadronization mechanism and production of muons in extensive air-showers. Refs.~\cite{Riehn:2019jet, Riehn:2017mfm, CMS:2015zrm} provide further details of the Sibyll model and its upgraded versions. 
+
+
+
+\section{Analysis, Results and Discussion}\label{sec3}
+
+For the current study, 0.1 million events have been generated using DPMJET III, HIJING, EPOS1.99, EPOS LHC and Sibyll2.3d various beam energies i.e., \sqrts~= 6.3, 17.3, 62.4, 200, 900 GeV and 2.76 TeV, 7 TeV, 13 TeV and 14 TeV in $pp$ collisions to study the energy dependence of $K^+/\pi^+$, $K^-/\pi^-$ and $K/\pi$ ratio. Additionally, on the basis of previous available energies, the prediction of these ratios are also presented at \sqrts~= 13 and 14 TeV. 
+
+
+
+\subsection{$K^+/\pi^+$ Ratio}
+
+%The $K^+/\pi^+$ ratios has been extracted using the various above said models. 
+%Table 1 shows the values of $K^+/\pi^+$ ratios obtained  from $pp$ collisions at different energies by using various MC models as mentioned earlier. These simulated results are also compared with available experimental data points at the same varied energies.  %\sqrts~= 6.3, 17.3, 62.4, 200, and 900 GeV along with the values at \sqrts~= 2.76 TeV, 7 TeV, 13 TeV and 14 TeV. 
+%It can be seen from Table 1 that 
+%In comparison with other MC models, the values of DPMJET III is lower as compared to other discussed models and does not show strong energy dependence at all energies. Sibyll2.3d and HIJING values are close to the experimental values from \sqrts~ $>$ 900 GeV, while slightly over predict at energy \sqrts~ $<$ 900 GeV. It has also been observed that Sibyll does not produce the simulations at \sqrts~ $<$ 10 GeV. EPOS1.99 and EPOS LHC is slightly overpredicting the experimental results upto \sqrts~ $<$ 900 GeV.   
+
+
+The results of $K^+/\pi^+$ ratio measured by various experiments at \sqrts~= 6.3 GeV~\cite{Pulawski:2015tka}, 17.3 GeV~\cite{NA49:2009brx}, 62.4 GeV~\cite{PHENIX:2011rvu}, 200 GeV~\cite{STAR:2008med}, 900 GeV~\cite{ALICE:2011gmo} and \sqrts~ = 2.76 TeV~\cite{ALICE:2015ial}, 7 TeV~\cite{ALICE:2015ial} is compared in table 1. The experimental results of $K^+/\pi^+$ ratios from inelastic $pp$ collisions \sqrts~= 6.3 GeV at mid rapidity from NA61/SHINE Collaboration is presented in Ref.~\cite{Pulawski:2015tka}. It has been reported that, a rapid changes in the energy dependence of $K^+/\pi^+$ ratios is observed in the SPS energy regime~\cite{Pulawski:2015tka}. It has also been pointed out that Pythia~8, UrQMD and HSD models failed to reproduce the experimental results of NA61/SHINE satisfactorily.           
+
+
+Figure~\ref{fig1} shows the $K^+/\pi^+$ ratio as a function of centre of mass energy (\sqrts) in $pp$ collisions from DPMJET III, EPOS1.99, EPOS LHC, HIJING and Sibyll2.3d simulated results in comparison with the experimental measurements. It has been observed that $K^+/\pi^+$ ratios in case of DPMJET III simulations show increasing trend upto \sqrts~= 62.4 GeV and sudden decrease at \sqrts~= 200 GeV and start to increase again with increasing energy. There is no prominent saturation is seen in case of DPMJET III towards LHC energy regime. The DPMJET III simulations confirm the presence of horn, which is seen in the experimental measurements. The DPMJET III simulations data points for $K^+/\pi^+$ ratio is taken from Ref.~\cite{Bhattacharyya:2017rmc}. $K^+/\pi^+$ ratio extracted from the EPOS1.99 model increases with the increase in energy and start to saturate at \sqrts~ $\ge$ 13 TeV and close to the experimental measurements. While different scenario has been observed in case of EPOS LHC mode. The $K^+/\pi^+$ ratio from EPOS LHC increases upto \sqrts~= 62.4 GeV and shows a sudden decrease at \sqrts~= 200 GeV which start to increase again at higher energies indicating the horn. EPOS LHC clearly over predict the experimental data at \sqrts~= 62.4 GeV. In case of HIJING, the ratio increases upto \sqrts~= 62.4 GeV, decrease at \sqrts~= 200 GeV and increases again at higher energies reflects the presence of horn. QGSJET II and Sibyll on the other hand, shows smooth increasing trend of ratios with increasing energy. It has also been observed that Sibyll does not produce the simulations at \sqrts~ $<$ 10 GeV. However, the abrupt increase in the ratio is seen in case of QGSJET II in between \sqrts~= 62.4 GeV and \sqrts~= 200 GeV and the ratio saturate at higher energies. EPOS1.99, HIJING and Sibyll model results reasonably reproduce the experimental measurements within errors. The sudden decrease in $K^+/\pi^+$ ratio is not confirmed by EPOS1.99 and Sibyll. However, large error bars in EPOS1.99 at \sqrts~ $\le$ 62.4 GeV make it difficult to claim the presence of horn in the ratio. The experimental measurements also shows the significant presence of horn in the ratio. We also give predictions of the ratio with various models at \sqrts~ = 14 TeV. There is no prediction observed by DPMJET III for this ratio at \sqrts~ = 14 TeV, while QGSJET II values of ratio is significantly higher as compared to the other models under study. 
+
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{pi+k+.pdf}
+\caption{ $K^+/\pi^+$ ratio vs function of energy at \sqrts~= 6.3 GeV upto \sqrts~= 14 TeV from DPMJET III, EPOS1.99, EPOS LHC, HIJING and Sibyll in comparison with the experimental results in $pp$ collisions.}
+\label{fig1}
+\end{center}
+\end{figure}
+
+\input table1.tex
+
+\subsection{$K^-/\pi^-$ Ratio}\label{subsec1}
+
+The energy dependence of $K^-/\pi^-$ ratio is computed using simulated data from various  above discussed model based event generators at \sqrts~= 6.3 GeV -- 14 TeV in $pp$ collisions. The resulted values of the ratio from simulations are listed in table 2 and it is observed that, the $K^-/\pi^-$ ratio from DPMJET III simulations is comparatively lower with respect to other models and EPOS1.99 is over predicting the ratio at \sqrts~ $\ge$ 62.4 GeV. HIJING, SIbyll, EPOS LHC and DPMEJET III results are compareable.  
+
+
+Figure~\ref{fig2} presents the $K^-/\pi^-$ ratio vs energy from various model simulations in comparison with the experimental data. At lower energies \sqrts~ $\le$ 200 GeV, the DPMJET III value is increasing with energy and sudden drop is seen at \sqrts~= 900 GeV and increases again at higher energies shows the presence of horn, while UrQMD fails~\cite{Bhattacharyya:2017rmc}. In case of HIJING and EPOS LHC the value of ratio increases with energy upto \sqrts~ $\le$ 62.4 GeV and decreases suddenly at \sqrts~= 200 GeV and increases again at higher energies which confirms the experimental claim of the presence of horn. It has also been observed that at \sqrts~= 62.4 GeV, HIJING and EPOS LHC clearly over predict the experimental results while a nice comparison at rest of energies. EPOS1.99 and Sibyll values of the ratio increases smoothly with the increase in energy and fails to shows the horn structure. On the other hand, QGSJET II values of the ratio smoothly increase upto \sqrts~ $\le$ 62.4 GeV and shows a sudden increase which continues towards higher energies. The ratio in case of all discussed models start to saturate at higher energy regimes. Almost all the models predict similar $K^-/\pi^-$ ratio at \sqrts~= 14 TeV, while QGSJET II values are relatively higher.    
+
+
+It is important to note that the data from experiments of $K^+/\pi^+$ and $K^-/\pi^-$ ratio vs energy confirm the presence of horn which is also observed in HIJING, DPMJET III and EPOS LHC model, while the rest of models do not significantly fails to describe the structure. This observed difference may be due to the difference in different models used for current study. In HIJING, Pythia approach to multiple jet processes and the nuclear effects for example jet quenching and parton shadowing is incorporated. The  multiple string phenomenological approach exchanges the multiple soft gluons between the quarks or di-quarks present in hadrons which further lead to the longitudnally oriented string-like excitations of those hadrons are also implemented in the HIJING. In order to fix the effect if color flow, valence quarks replaces the flavour of final scattered quark or di-quark. Due to the reason that gluon jets are dominated in $K/\pi$ ratio at intermediate {\ppt} and the ratio is observed to be not sensitive to this~\cite{Sjostrand:1987su, Werner:1988yt, Wang:1991hta}. DPMJET III, EPOS QGSJET and Sibyll are hadronic interaction models and are based on Gribov Reggeon approach of Pomeron exchange in multiple scatterings. The exchange of individual pomeron occur independently in QGSJET model which is not true at higher energies where strong overlap of parton cascade exists which further interact with each other. This could be the reason of overpredictig both the ratio at higher energies~\cite{Thakuria:2012ie}. SImilar to HIJING, Sibyll also incorporate the many concepts of Dual Parton Model. Compared to other models, a pomeron amplitude is not explicitly implemented in Sibyll. Quantum mechanical model of multiple scattering, EPOS, is based on strings and partons. The production of particles and cross-section observed to be consistent with the conservation of energy in EPOS. DPMJET III, a Hadronic transport model based on the interactions of strings. The collisions of particles are described through the color exchange and momentum in partons in target and projectile. These exchanges results colorless objects to be joined with these partons which we called ropes, flux tubes or strings.     
+
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{pi-k-.pdf}
+\caption{$K^-/\pi^-$ ratio vs function of energy at \sqrts~= 6.3 GeV upto \sqrts~= 14 TeV from DPMJET III, EPOS1.99, EPOS LHC, HIJING and Sibyll in comparison with the experimental results in $pp$ collisions.}
+
+\label{fig2}
+\end{center}
+\end{figure}
+
+
+
+It is important to mention that the presence of horn in $K^\pm/\pi^\pm$ ratio in experimental measurements at low energy regime is confirmed by various experiments. In hadronic models which confirms the presence of this structure at low energies, two long strings along with valence quark are present at the end and therefore, the contribution of SCET-soft sea quark in the resulted particle with low $K^\pm/\pi^\pm$ are already given in Pythia. The fits to cross-section explains the entrance of additional strings at higher energies. The partons in this case are considered like a minijet extension of pQCD events at larger {\ppt} and a continuous transition is expected at cutoff {\ppt} which could results the large {\ppt} and hence larger ratio in case of particles at sea string ends. At reaching the energy where the new and shorter strings just arrived, there is sizeable fraction of those produced particles which contain the string end partons. These strings are then increases  and gets longer with increase in energy and it is expected that the influence of these strings gets weaker which results the decrease in $K^\pm/\pi^\pm$ ratio~\cite{Bhattacharyya:2017rmc}. This case is different in heavy-ion collisions due to the enhancement in the new chains as the results of collision of several nucleons with the target and conversely. The newly produced shorter strings results enhancement in the $K^\pm/\pi^\pm$ ratio. There is no significant effect from the fusion of strings and rescattering. Due to the presence of uncertainty in the parameterization relatd to sea strings, the position of this horn is not a robust prediction.  
+
+
+\input table2.tex
+When comparing Tables 1 and 2, there exists significant difference in the both ratios from almost all of the studied models upto \sqrts~= 200 GeV and starts to saturate and hence the no significant difference is observed towards higher energies (\sqrts~= 900 GeV -- 14 TeV). Insignificant difference between the ratios has been observed in case of experimental measurements. This difference may be due to the underlying production mechanisms of $K^+$ and $K^-$. Two possible mechanisms are involved to study the $K^\pm$ production study, pair production and associated production mechanism. Kaon production is heavily influenced by associated production of $s$ and $\bar s$ quark pairs. Since, there is no kaon production through the $\Delta$ channel and hence $K^+$ are produced through $N + N \rightarrow N + X + K^+$ and $\pi + N \rightarrow X + K^+$, where, X is either {\lam} or $\Xi$ hyperon and N is the nucleon. The energy threshold for $N + N \rightarrow N + \Lambda + K$ is significantly lower than thermal production of kaon pairs. The pair production process to produce $K^+$ and $K^-$ is $N + N \rightarrow N + N + K^+ + K^-$. Kaon production in association with a $\Lambda$ is only available to $K^+$ and $K^0$ due to spin degeneracies. The associated production is dominated at lower energies and pair production dominates at higher energies in which significantly same number or $K^+$ and $K^-$ are produced. Due to the higher threshold a steeper excitation function of $K^-$ is observed as compared to $K^+$ and therefore, the production cross-section of $K^-$ increases faster at higher energies to that of $K^+$ which results increase in $K^-/\pi^-$ ratio.           
+
+
+
+
+
+
+\subsection{$K/\pi$ Ratio}
+
+We have also extracted the $K/\pi$ (($K^+ + K^-$)/($\pi^+ + \pi^-$)) ratio in $pp$ collisions at various energies using above discussed models. These results are then compared with the $K/\pi$ ratio measured by different experiments~\cite{Pulawski:2015tka, NA49:2009brx, PHENIX:2011rvu, STAR:2008med, ALICE:2011gmo, ALICE:2015ial}. The extracted $K/\pi$ ratio from models as well as experimental values are listed in Table 3.     
+
+Figure~\ref{fig3} presents the comparison of $K/\pi$ multiplicity ratio from models to that experimental results. There is smooth increase in the ratio observed in experimental measurements for all energies and almost becomes independent of energy from \sqrts~= 200 GeV. Similar to experimental data, almost all the studied models starts to saturate from \sqrts~ $>$ 900 GeV. At \sqrts~ $<$ 200 GeV, EPOS1.99 and QGSJET II values are compareable with data while start to over predict at higher energies. Sibyll, HIJING and EPOS LHC values of the ratio are in good agreement with experimental data at almost all of energies. While HIJING and EPOS LHC values of the ratio is almost the same and over predict the data at \sqrts~= 200 GeV. QGSJET II values at \sqrts~ $\le$ 62.4 GeV seems to be lower as compared to experimental data and over estimate the data at higher energies. Overall, the $K/\pi$ from the models are in good agreement with experimental data and saturation is see at higher energies. The predictions of various models at \sqrts~= 13 and 14 TeV suggest that the experimental data should be increasing and lie around the values observed from the model simulations.         
+
+
+The $K/\pi$ ratio in $pp$ collisions at various RHIC and LHC energies from PACIAE model based on Pythia agrees with NA49 Experimental results~\cite{Long:2011tk}. The ratio is observed to be increasing with increasing energies. Our study with various model predictions have similar findings at lower as well as higher energies. The possible physics message has already been discussed in above section~\ref{subsec1}.  
+
+
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{k_pi.pdf}
+\caption{$K/\pi$ ratio vs function of energy at \sqrts~= 6.3 GeV upto \sqrts~= 14 TeV from DPMJET III, EPOS1.99, EPOS LHC, HIJING and Sibyll in comparison with the experimental results in $pp$ collisions.}
+\label{fig3}
+\end{center}
+\end{figure}
+
+\input table3.tex
+
+\section{Conclusion}\label{sec4}
+
+
+A systematic and comprehensive study has been performed in order to calculate the $K^+/\pi^+$, $K^-/\pi^-$ and $K/\pi$ (($K^+ + K^-$section)/($\pi^+ + \pi^-$)) ratio as a function of energy in $pp$ collisions at various energies using different model simulations. A good agreement between the model predictions and experimental data has been observed in many of the studied models. The difference in both ratios ($K^+/\pi^+$, $K^-/\pi^-$) is observed in experimental measurements and model simulations from \sqrts~= 6.3 GeV to \sqrts~= 200 GeV which becomes insignificant at higher LHC energies. The experimental data suggest the presence of horn-like structure at lower energies and HIJING and EPOS LHC also suggest the similar findings. The production mechanism of kaon plays an important role to study this horn-like structure. There are mainly two mechanisms involved, associated production which is dominated at lower energies and pair production is dominated at higher energies. There may be a possible cross-over between these two mechanisms at energy $\approx$ \sqrts~= 54.4 GeV as reported in Ref.~\cite{Ashraf:2021nkb} in case of heavy-ion collisions. The experimental results of $K/\pi$ (($K^+ + K^-$)/($\pi^+ + \pi^-$)) ratio does not show the presence of horn-like structure and smoothly increasing with increasing energies. However, most of the model simulations has similar findings to that of data except HIJING and EPOS LHC, which slightly over estimate the data at \sqrts~= 62.4 GeV. It has also been observed that the ratio at all the model simulations start to saturate at LHC energies. We also made predictions of these ratios from various model simulations at \sqrts~= 13 and 14 TeV on the bases of previous available data. These predictions suggest the saturation at higher energies.  
+
+\vskip0.5cm
+\textbf{Acknowledgement}\\
+The authors would like to show our gratitude to the Ms. Sumaira Ikram from Riphah International University, Mr. Muhammad Salman Ashraf from Institute of Space Technology, Mr. Sudheer Muhammad from Quaid-e-Azam University, Islamabad Pakistan for sharing their pearls of wisdom with us during the course of this research. 
+
+\vskip0.5cm
+\textbf{Availability of Data and Material}\\
+The authors declare that all the supported data of this study are available within the article.
+
+
+%\begin{thebibliography}{}
+%\bibitem{}
+\input bib.tex%
+%\end{thebibliography}
+
+
+
+%\end{multicols}
+
+
+%https://arxiv.org/pdf/1101.5596.pdf
+
+\end{document}
